@@ -22,11 +22,14 @@ https://docs/system-architecture.png
 
 # Automated Setup
 ## Clone the repository
+
 git clone https://github.com/yourusername/SolidDataEngineeringVPi.git
+
 cd SolidDataEngineeringVPi
 
 ## Run the complete setup
 chmod +x setup.sh
+
 ./setup.sh
 
 # Project Structure
