@@ -1,0 +1,72 @@
+Connection Table
+Component	Connection	Target	Wire Color (Typical)
+Raspberry Pi 3	USB Port	USB to RS485 Converter	USB Cable
+RS485 Converter	A+ Pin	NPK Sensor A+	Yellow
+RS485 Converter	B- Pin	NPK Sensor B-	Blue
+RS485 Converter	GND Pin	NPK Sensor GND	Green
+Power Supply	12V+	NPK Sensor VCC	Red
+Power Supply	12V-	NPK Sensor GND	Black
+Raspberry Pi	MicroUSB	5V Power Supply	Power Cable
+Raspberry Pi	Ethernet	Network Router	Ethernet Cable
+Required Components
+Essential Hardware
+Raspberry Pi 3 (with MicroSD card and OS)
+
+NPK Soil Sensor with Modbus RTU (RS485 interface)
+
+USB to RS485 Converter (e.g., FTDI, CH340, CP2102)
+
+12V DC Power Supply for soil sensor (1-2A recommended)
+
+5V DC Power Supply for Raspberry Pi (2.5A recommended)
+
+Cables and Connectors
+Jumper wires (for RS485 connections)
+
+USB Cable (Type A to whatever your converter needs)
+
+Ethernet Cable or WiFi connection
+
+Power cables for both devices
+
+Optional but Recommended
+Breadboard for secure connections
+
+Terminal blocks for professional wiring
+
+Waterproof enclosure for outdoor deployment
+
+Surge protector for power connections
+
+Step-by-Step Wiring Instructions
+1. Power Connections
+Connect 5V power supply to Raspberry Pi MicroUSB port
+
+Connect 12V power supply to NPK sensor:
+
+Red wire: 12V+ to sensor VCC
+
+Black wire: 12V- to sensor GND
+
+2. Data Connections
+Connect USB cable from Raspberry Pi to RS485 converter
+
+Wire RS485 converter to NPK sensor:
+
+A+ (Converter) → A+ (Sensor) - Yellow wire
+
+B- (Converter) → B- (Sensor) - Blue wire
+
+GND (Converter) → GND (Sensor) - Green wire
+
+3. Network Connection
+Connect Ethernet cable from Raspberry Pi to router
+
+Ensure Raspberry Pi has internet access for database communication
+
+4. Sensor Placement
+Insert NPK sensor probes into soil at measurement location
+
+Ensure good soil contact for accurate readings
+
+Protect connections from moisture if outdoors
