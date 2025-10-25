@@ -1,4 +1,5 @@
 SolidDataEngineeringVPi 🌱
+
 Solid Data Engineering for Raspberry Pi - Soil Monitoring System
 
 A robust, production-ready soil monitoring system that collects sensor data and stores it in MySQL. Designed for reliable data engineering practices on Raspberry Pi hardware with enterprise-grade data pipeline architecture.
