@@ -1,36 +1,47 @@
+# Hardware Wiring Diagram
+
+## Raspberry Pi 3 to Soil Sensor Connection
+
+```mermaid
 graph TB
-    subgraph Hardware Layer
-        A[NPK Soil Sensor] -->|Modbus RTU<br/>RS485| B[USB to RS485<br/>Converter]
-        B -->|USB Serial| C[Raspberry Pi 3]
+    subgraph Raspberry Pi 3
+        A[USB Ports] --> B[USB to RS485 Converter]
     end
 
-    subgraph Software Layer
-        C --> D[SensorReader.py<br/>Reads sensor data]
-        D --> E[MainController.py<br/>Orchestrates system]
-        
-        E --> F{Internet<br/>Available?}
-        F -->|Yes| G[OnlineLogger.py<br/>MySQL Database]
-        F -->|No| H[OfflineLogger.py<br/>CSV Storage]
-        
-        H -->|When Online| I[Data Sync<br/>to Database]
+    subgraph Soil Sensor NPK Sensor
+        C[RS485 Interface<br/>A+/B- wires]
     end
 
-    subgraph Data Storage
-        G --> J[(MySQL Database<br/>soilmonitornig)]
-        H --> K[📁 offline_data.csv]
+    subgraph Power Supply
+        D[12V DC Power<br/>for Sensor]
     end
 
-    subgraph System Services
-        L[systemd Service<br/>soil-monitor.service] --> M[Auto-start on Boot]
-        M --> N[Continuous Monitoring<br/>300s intervals]
-    end
+    B -->|RS485 Communication| C
+    D -->|12V Power| C
 
-    classDef hardware fill:#e9ecef,stroke:#6c757d
-    classDef software fill:#d1ecf1,stroke:#0dcaf0
-    classDef storage fill:#d4edda,stroke:#28a745
-    classDef service fill:#fff3cd,stroke:#ffc107
+    classDef rpi fill:#cce5ff,stroke:#0066cc
+    classDef sensor fill:#d4edda,stroke:#28a745
+    classDef power fill:#fff3cd,stroke:#ffc107
     
-    class A,B,C hardware
-    class D,E,F,G,H,I software
-    class J,K storage
-    class L,M,N service
+    class A,B rpi
+    class C sensor
+    class D power
+```
+
+## Pin Connection Details
+
+| Component | Connection | Raspberry Pi 3 |
+|-----------|------------|----------------|
+| USB to RS485 Converter | USB-A | Any USB Port |
+| RS485 Converter | A+ | → Soil Sensor A+ |
+| RS485 Converter | B- | → Soil Sensor B- |
+| Soil Sensor | Power + | → 12V DC + |
+| Soil Sensor | Power - | → 12V DC - |
+| Soil Sensor | GND | → Common GND |
+
+## Required Components
+- Raspberry Pi 3
+- USB to RS485 Converter
+- NPK Soil Sensor (Modbus RTU)
+- 12V DC Power Supply
+- Jumper Wires
