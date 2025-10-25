@@ -33,7 +33,7 @@ graph TB
         N[12V Power Supply<br/>for Sensor] --> J
     end
 
-    % Styling
+    %Styling
     classDef rpi fill:#cce5ff,stroke:#0066cc
     classDef converter fill:#d4edda,stroke:#28a745
     classDef sensor fill:#fff3cd,stroke:#ffc107
