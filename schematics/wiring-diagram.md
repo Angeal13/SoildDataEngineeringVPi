@@ -1,3 +1,8 @@
+# Hardware Wiring Diagram
+
+## Raspberry Pi 3 to Soil Sensor Connection
+
+```mermaid
 graph TB
     subgraph Raspberry Pi 3
         A[USB Ports] --> B[USB to RS485 Converter]
@@ -21,3 +26,22 @@ graph TB
     class A,B rpi
     class C sensor
     class D power
+```
+
+## Pin Connection Details
+
+| Component | Connection | Raspberry Pi 3 |
+|-----------|------------|----------------|
+| USB to RS485 Converter | USB-A | Any USB Port |
+| RS485 Converter | A+ | → Soil Sensor A+ |
+| RS485 Converter | B- | → Soil Sensor B- |
+| Soil Sensor | Power + | → 12V DC + |
+| Soil Sensor | Power - | → 12V DC - |
+| Soil Sensor | GND | → Common GND |
+
+## Required Components
+- Raspberry Pi 3
+- USB to RS485 Converter
+- NPK Soil Sensor (Modbus RTU)
+- 12V DC Power Supply
+- Jumper Wires
