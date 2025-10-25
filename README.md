@@ -1,4 +1,4 @@
-SolidDataEngineeringVPi 🌱
+# SolidDataEngineeringVPi 🌱
 
 Solid Data Engineering for Raspberry Pi - Soil Monitoring System
 
@@ -19,17 +19,17 @@ https://docs/system-architecture.png
 
 📊 Real-time Monitoring - Continuous data collection with configurable intervals
 
-Automated Setup
-bash
-# Clone the repository
+
+# Automated Setup
+## Clone the repository
 git clone https://github.com/yourusername/SolidDataEngineeringVPi.git
 cd SolidDataEngineeringVPi
 
-# Run the complete setup
+## Run the complete setup
 chmod +x setup.sh
 ./setup.sh
 
- Project Structure
+# Project Structure
 text
 SolidDataEngineeringVPi/
 ├── MainController.py          # Orchestrates the entire data pipeline
@@ -44,7 +44,7 @@ SolidDataEngineeringVPi/
     ├── system-architecture.md # Data flow and components
     └── installation-guide.md  # Detailed setup instructions
 
-🙏 Acknowledgments
+# 🙏 Acknowledgments
 Raspberry Pi Foundation for the hardware platform
 
 MySQL for robust data storage
