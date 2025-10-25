@@ -1,4 +1,10 @@
-## Wiring
+#Hardare Setup
+
+# System Architecture
+
+## Wiring Setup
+
+```mermaid
 graph TB
     subgraph Raspberry Pi 3
         A[MicroUSB Power<br/>5V 2.5A] --> B[Raspberry Pi 3]
@@ -38,9 +44,11 @@ graph TB
     class D,G,H,I converter
     class J,K,L sensor
     class M,N power
+```
 
 ## Detailed Connection
 
+```mermaid
 graph LR
     subgraph Power Connections
         A[5V Power Supply] --> B[Raspberry Pi 3<br/>MicroUSB]
@@ -71,7 +79,11 @@ graph LR
     class E,F,G,H,I data
     class J,K network
 
+```
+
 ## Pin-to-Pin Wiring
+
+```mermaid
 flowchart TD
     subgraph Raspberry Pi 3
         A[USB Port] --> B[USB to RS485 Converter]
@@ -109,4 +121,7 @@ flowchart TD
     class F,G,H,I,J,K sensor
     class L,M,N,O,P wire
 
+
+
+```
 
