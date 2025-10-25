@@ -33,18 +33,30 @@ chmod +x setup.sh
 ./setup.sh
 
 # Project Structure
-text
+
+
 SolidDataEngineeringVPi/
+
 ├── MainController.py          # Orchestrates the entire data pipeline
+
 ├── OnlineLogger.py            # MySQL database operations
+
 ├── OfflineLogger.py           # Local CSV storage management
+
 ├── SensorReader.py            # Modbus sensor communication
+
 ├── Config.py                  # Centralized configuration
+
 ├── setup.sh                   # Automated deployment script
+
 ├── requirements.txt           # Python dependencies
+
 └── docs/
+
     ├── hardware-setup.md      # Wiring diagrams and connections
+    
     ├── system-architecture.md # Data flow and components
+    
     └── installation-guide.md  # Detailed setup instructions
 
 # 🙏 Acknowledgments
