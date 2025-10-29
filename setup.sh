@@ -43,15 +43,15 @@ pip3 install pandas
 # Create application directory
 echo ""
 echo "Step 5: Setting up application directory..."
-sudo mkdir -p /opt/soil_monitor
-sudo chown -R $USER:$USER /opt/soil_monitor
+sudo mkdir -p /opt/SoildDataEngineeringVPi
+sudo chown -R $USER:$USER /opt/SoildDataEngineeringVPi
 
 # Copy application files
 echo ""
 echo "Step 6: Copying application files..."
 # Check if files exist in current directory
 if [ -f "MainController.py" ]; then
-    cp *.py /opt/soil_monitor/
+    cp *.py /opt/SoildDataEngineeringVPi/
     echo "Application files copied successfully."
 else
     echo "Error: Application files not found in current directory."
@@ -60,8 +60,8 @@ else
 fi
 
 # Create data directory for offline storage
-mkdir -p /opt/soil_monitor/data
-chmod 755 /opt/soil_monitor/data
+mkdir -p /opt/SoildDataEngineeringVPi/data
+chmod 755 /opt/SoildDataEngineeringVPi/data
 
 # Create systemd service file
 echo ""
