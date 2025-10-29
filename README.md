@@ -23,7 +23,7 @@ https://docs/system-architecture.png
 # Automated Setup
 ## Clone the repository
 
-git clone https://github.com/yourusername/SolidDataEngineeringVPi.git
+git clone https://github.com/Angeal13/SoildDataEngineeringVPi
 
 cd SolidDataEngineeringVPi
 
