@@ -25,7 +25,7 @@ https://docs/system-architecture.png
 
 git clone https://github.com/Angeal13/SoildDataEngineeringVPi
 
-cd SolidDataEngineeringVPi
+cd SoildDataEngineeringVPi
 
 ## Run the complete setup
 chmod +x setup.sh
