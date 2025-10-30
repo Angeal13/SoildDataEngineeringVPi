@@ -36,9 +36,9 @@ sudo usermod -a -G dialout $USER
 # Install Python packages
 echo ""
 echo "Step 4: Installing Python packages..."
-pip3 install mysql-connector-python
-pip3 install pyserial
-pip3 install pandas
+pip3 install --break-system-packages mysql-connector-python
+pip3 install --break-system-packages pyserial
+pip3 install --break-system-packages pandas
 
 # Create application directory
 echo ""
