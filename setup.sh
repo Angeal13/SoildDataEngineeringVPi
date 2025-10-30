@@ -74,7 +74,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER
-WorkingDirectory=/opt/soil_monitor
+WorkingDirectory=/opt/SoildDataEngineeringVPi
 ExecStart=/usr/bin/python3 /opt/SoildDataEngineeringVPi/MainController.py
 Restart=always
 RestartSec=10
