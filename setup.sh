@@ -75,7 +75,7 @@ After=network.target
 Type=simple
 User=$USER
 WorkingDirectory=/opt/soil_monitor
-ExecStart=/usr/bin/python3 /opt/soil_monitor/MainController.py
+ExecStart=/usr/bin/python3 /opt/SoildDataEngineeringVPi/MainController.py
 Restart=always
 RestartSec=10
 StandardOutput=journal
@@ -122,7 +122,7 @@ echo ""
 echo "What was installed:"
 echo "✅ System dependencies (Python, git)"
 echo "✅ Python packages (mysql-connector, pyserial, pandas)"
-echo "✅ Application files in /opt/soil_monitor/"
+echo "✅ Application files in /opt/SoildDataEngineeringVPi/"
 echo "✅ System service (auto-start on boot)"
 echo "✅ Serial port permissions"
 echo ""
